@@ -21,7 +21,7 @@ class BlogPost(models.Model):
     slug = models.SlugField()
     category = models.CharField(
         max_length=50, choices=Genres.choices, default=Genres.POLITICAL_NEWS)
-    thumbnail = models.ImageField(upload_to="photos/%Y/%m/%d/")
+    thumbnail = models.URLField(max_length=200, null=True)
     excerpt = models.CharField(max_length=150)
     date_created = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
