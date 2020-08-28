@@ -34,7 +34,7 @@ class LoginView(GenericAPIView):
 
         if user:
             auth_token = jwt.encode(
-                {"username": user.username}, settings.SECRET_KEY)
+                {"username": user.username, "email": user.email}, settings.SECRET_KEY)
 
             serializer = UserSerializer(user)
 
