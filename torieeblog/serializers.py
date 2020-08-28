@@ -11,5 +11,5 @@ class BlogpostSerializer(serializers.ModelSerializer):
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
-        medel = Genres
+        model = Genres
         fields = "__all__"
